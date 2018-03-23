@@ -11,4 +11,4 @@ Making The Brington Times responsive
 
 - The width is set to 100% for most objects
 - The menu icon appears bellow 550px but the script i wrote to make it work isnt working yet
-- The mamajor breakpoints are similar if not the same with the provided solution
+- The major breakpoints are similar if not the same with the provided solution
