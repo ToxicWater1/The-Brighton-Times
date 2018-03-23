@@ -1,0 +1,78 @@
+.content {
+	display: flex;
+	flex-wrap: wrap;
+}
+#menu {
+	display: none;
+}
+
+.hero, .top-news, .scores, .weather, .recent-news {
+  order: 10;
+}
+/* Can i avoid the above assignment ?*/
+@media screen and (max-width: 549px) {
+	.header__logo{
+		height: 48px;
+		margin-right: 1em;
+	}
+	.header__title{
+		margin-left: 0;
+		font-size: 2em;
+	}
+	.nav{
+		width: 300px;
+		position: absolute;
+		-webkit-transform: translate(-300px, 0);
+		transform: translate (-300px,0);
+		transition: transdorm 0.3s ease;
+	}
+	.nav.open{
+	-webkit-transform: translate(0, 0);
+	transform: translate (0, 0);
+	}
+	#menu {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		padding: 1em;
+	}
+	#menu svg {
+		width: 32px;
+		fill: #E0E0E0;
+	}
+}
+@media screen and (min-width: 550px){
+	.nav{
+		transform: translate (0, 0);
+	}
+	.hero{
+		order: 0;
+		width: 60%;
+	}
+	.weather {
+		order: 1;
+		width: 40%;
+	}
+}
+@media screen and (min-width: 800px) {
+	.hero{
+		width: 50%;
+	}
+	.top-news {
+    order: 1;
+    width: 50%;
+  }
+  .scores {
+    order: 2;
+    width: 60%;
+  }
+  .weather {
+    order: 3;
+  }
+}
+@media screen and (min-width: 1000px) {
+	.header__inner, .nav, main {
+		width:1000px;
+		margin: 0 auto 0;
+	}
+}
