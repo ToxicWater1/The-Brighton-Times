@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="responsive.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
 
@@ -183,16 +184,22 @@
           <li><a href="#">RSS</a></li>
         </ul>
       </footer>
-<script>
-/*
-used part of the script provided in the solution of this lesson but i prefer to do it with jQuerry
-*/
-      var menu = document.querySelector('#menu');
-      var drawer = document.querySelector('.nav');
-
-      menu.addEventListener('click', function(e) {
-        drawer.classList.toggle('open');
+	<script>
+      var menu = $('#menu');
+      var drawer = $('.nav');
+	  var main = $('.main');
+	  /*
+	   remove comment for testing
+	   
+	  $('body').css({"background-color" : "red" });
+	  */
+      menu.on('click', function(e) {
+        drawer.toggleClass('open');
         e.stopPropagation();
+		});
+	  main.on('click', function(){
+	  drawer.removeClass('open');
+	  });
     </script>
     </main>
   </body>
